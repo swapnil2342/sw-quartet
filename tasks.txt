@@ -1,0 +1,26 @@
+Hello and welcome to our test!
+You can run the application with the command 'yarn start'
+
+*** Task 1 ***
+
+There ist a modal component (ChangeCardSetModal.jsx) which should open a modal when the user clicks the 'Current card set' button.
+The component is already there you just have to add it to the marked space in the Game.jsx file
+You only have to add the component and give it the right properties. All the properties are already there,
+you don't have to add something on your own (Game.jsx)
+
+*** Task 2 ***
+
+Implement a async function and use the fetch api or axios to get data from the starwars api (the url is already there)
+After the data is fetched call the 'dealCards' function with the results and set loading to false (useCards.jsx)
+
+*** Task 3 ***
+
+Add some styling for the card component and its table to the Card.css file.
+The Component should look like the screenshot picture in the public folder.
+If the user selects a property from the card the property should be highlighted in yellow.
+(Card.css)
+
+*** Task 4 ***
+Implement the game logic by immutable updating the state depending on who won the current round.
+You find tips to the logic in the code (useCards.jsx). The current cards for player and computer
+are stored in the player and computer state.

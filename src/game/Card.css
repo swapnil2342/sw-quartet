@@ -1,0 +1,19 @@
+h1 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+{/* TODO Task 3 */}
+
+{/* TODO Task 3 */}
+
+img {
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.back {
+  height: 445px;
+  background-color: lightgreen;
+}
