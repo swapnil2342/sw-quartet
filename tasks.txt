@@ -24,3 +24,12 @@ If the user selects a property from the card the property should be highlighted 
 Implement the game logic by immutable updating the state depending on who won the current round.
 You find tips to the logic in the code (useCards.jsx). The current cards for player and computer
 are stored in the player and computer state.
+
+*** Task 5 ***
+A admin area should be implemented with the help of redux. In the admin directory there is already a
+component which is reachable via '/admin'. The redux store is also there and you should now create a
+simple table component to display the initial data from the store
+
+*** Task 6 ***
+Add the opportunity to delete one of the elements using redux. Update your form first and add
+a confirmation popup. Then update the store based on the dispatched delete action.
