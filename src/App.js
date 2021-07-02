@@ -1,15 +1,33 @@
-// Importing the Bootstrap CSS
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import Game from "./game/Game";
+import Admin from "./admin/Admin";
 
-function App() {
+export default function App() {
   return (
       <div className="App">
-          <Game title={"Starwars Quartet"}/>
+          <Router>
+              <Switch>
+                  <Route
+                      path="/admin"
+                      render={() => {
+                          return <Admin />;
+                      }}
+                  />
+                  <Route
+                      path="/"
+                      render={() => {
+                          return <Game title="Starwars Quartet" />;
+                      }}
+                  />
+              </Switch>
+          </Router>
       </div>
   );
 }
-
-export default App;
