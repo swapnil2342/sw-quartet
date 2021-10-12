@@ -1,9 +1,8 @@
 import React from 'react';
+import List from "./List";
 
 export default function Admin() {
     return (
-        <div>
-            Display list here
-        </div>
+        <List />
     )
 }

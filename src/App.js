@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 import Game from "./game/Game";
-import Admin from "./admin/Admin";
+import Admin from "./admin/components/Admin";
 import {Provider} from "react-redux";
 import {configureStore} from "./store/store";
 
