@@ -25,7 +25,7 @@ export default function useCards(initialComp){
      * get async data from external api
      */
     function getData(){
-        const url = `https://swapi.dev/api/${currComp}`;
+        const url = `https://swapi.py4e.com/api/${currComp}`;
         {/* TODO Task 2 */}
         {/* TODO Task 2 */}
     }
