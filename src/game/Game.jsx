@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Badge, Spinner} from 'react-bootstrap'
-
+import ChangeCardSetModal from './ChangeCardSetModal';
 import useCards from "./useCards";
 import './Game.css';
 import Card from './Card';
@@ -27,6 +27,12 @@ export default function Game({title}) {
                 <Button variant="primary" className={"header"} onClick={toggle}>
                     Current card set <Badge variant="light">{compareType}</Badge>
                 </Button>
+                <ChangeCardSetModal 
+                    show={showModal}
+                    handleClose={toggle}
+                    currentOption={compareType}
+                    setCurrentOption={setCurrentOptionHandler}
+                />
                 {/* TODO Task 1 */}
                 {/* TODO Task 1 */}
                 <h1 className={"header"}>

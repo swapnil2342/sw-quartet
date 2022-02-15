@@ -26,6 +26,15 @@ export default function useCards(initialComp){
      */
     function getData(){
         const url = `https://swapi.py4e.com/api/${currComp}`;
+        axios.get(url)
+        .then(res => {
+            const data=res.data
+            if(data)
+            {   
+                dealCards(data.results)
+                setLoading(false)
+            }   
+        })
         {/* TODO Task 2 */}
         {/* TODO Task 2 */}
     }
@@ -57,14 +66,17 @@ export default function useCards(initialComp){
         const firstComputer = computer[0];
         let playerNew, computerNew = [];
         {/* TODO Task 4 splice the first card from player and computer */}
-
+         playerNew= player.splice(0,1,firstPlayer)
+         computerNew=computer.splice(0,1,firstComputer)
         {/* TODO Task 4 */}
 
         if (firstPlayer[prop] > firstComputer[prop]) {
+            
             // player wins - player gets computers card
             playersTurnUpdate = true;
             {/* TODO Task 4 update players array */}
-
+            update(player, {$merge:firstComputer});
+           
             {/* TODO Task 4 */}
 
             if (computerNew.length === 0) {
@@ -75,9 +87,9 @@ export default function useCards(initialComp){
             // computer wins - computer gets players card
             playersTurnUpdate = false;
             {/* TODO Task 4 update computers array */}
-
+            update(computer, {$merge:firstPlayer});
+          
             {/* TODO Task 4 */}
-
             if (playerNew.length === 0) {
                 alert('Computer wins');
                 return;
@@ -85,7 +97,10 @@ export default function useCards(initialComp){
         } else {
             // draw - no card changes
             {/* TODO Task 4 update players and computers array */}
-
+            if (playerNew.length === computerNew.length) {
+                alert('draw - no card changes');
+                return;
+            }
             {/* TODO Task 4 */}
         }
 
